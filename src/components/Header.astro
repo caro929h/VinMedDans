@@ -1,0 +1,172 @@
+<header>
+  <div class="navigation_wrap">
+    <div class="logo">
+      <a href="/"> <img class="logo_img" src="/img/black_logo.png" alt="" /></a>
+    </div>
+
+    <button id="burger-menu">
+      Menu
+      <span></span>
+    </button>
+    <nav id="menu">
+      <ul>
+        <li><a href="/"> Forside</a></li>
+        <li><a href="/vine"> Hvem er vi?</a></li>
+        <li><a href="/Opskrifter"> Vores udvalg</a></li>
+        <li><a href="/omos"> Kontakt os</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<script src="../scripts/burger.js"></script>
+
+<style>
+  /* HEADER */
+
+  main {
+    padding-left: 5px;
+    margin-left: 5px;
+  }
+
+  .navigation_wrap {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin: 20px;
+  }
+  header {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    align-items: right;
+    padding-right: 2rem;
+    justify-content: space-between;
+    position: fixed;
+    top: 0;
+
+    width: 100%;
+  }
+
+  h1,
+  h2,
+  h3 {
+    color: white;
+    font-size: 1rem;
+    font-family: "Montserrat";
+  }
+
+  .logo_img {
+    width: 20%;
+  }
+
+  /* BURGERMENU */
+
+  #burger-menu {
+    text-indent: -9999px;
+    display: block;
+    border: none;
+    background: transparent;
+    margin: 60px;
+    cursor: pointer;
+    height: 27px;
+    width: 27px;
+    z-index: 2;
+    position: fixed;
+    top: 0px;
+    right: 30px;
+  }
+
+  #burger-menu span,
+  #burger-menu span:before,
+  #burger-menu span:after {
+    background: white;
+    display: block;
+    height: 3px;
+    opacity: 1;
+    position: absolute;
+    transition: 0.3s ease-in-out;
+    content: "";
+  }
+  #burger-menu span:before {
+    left: 0px;
+    top: -10px;
+    width: 27px;
+  }
+  #burger-menu span {
+    left: 0px;
+    top: 13px;
+    width: 27px;
+  }
+  #burger-menu span:after {
+    left: 0px;
+    top: 10px;
+    width: 27px;
+  }
+  #burger-menu.close span:before {
+    top: 0px;
+    transform: rotate(90deg);
+    width: 27px;
+    background: pink;
+  }
+  #burger-menu.close span {
+    transform: rotate(-45deg);
+    top: 13px;
+    width: 27px;
+    background: pink;
+  }
+  #burger-menu.close span:after {
+    top: 0px;
+    left: 0;
+    transform: rotate(90deg);
+    opacity: 0;
+    width: 0;
+    background: pink;
+  }
+  #menu {
+    z-index: 1;
+    min-width: 100%;
+    min-height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    visibility: hidden;
+    opacity: 0;
+    text-align: center;
+    padding-top: 20px;
+    transition: all 0.3s ease-in-out;
+  }
+  #menu.overlay {
+    visibility: visible;
+    opacity: 1;
+    padding-top: 100px;
+    background: white;
+  }
+  #menu ul {
+    padding: 0;
+  }
+  #menu li {
+    list-style: none;
+    display: initial;
+  }
+  #menu a {
+    color: pink;
+    display: block;
+    font-size: 300%;
+    margin-bottom: 30px;
+    text-decoration: none;
+    font-family: "Montserrat";
+    text-align: right;
+    padding-right: 33.5%;
+    padding-top: 2%;
+  }
+
+  #menu a:hover {
+    color: rgb(215, 150, 161);
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: rgb(215, 150, 161);
+  }
+</style>
