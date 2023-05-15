@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import "../style/generelt.css"
+import "../style/generelt.css";
 ---
 
 <html lang="en">
@@ -10,21 +10,131 @@ import "../style/generelt.css"
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&display=swap" rel="stylesheet">
-    <title>Astro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&display=swap" rel="stylesheet" />
+    <title>Om_os</title>
   </head>
   <body>
     <Header />
-    <main></main>
-    <Footer />
+    <main>
+      <br />
+      <br />
+      <br />
+
+      <div class="animation_top">
+        <img src="/img/bær.png" alt="" />
+        <h1>Om os</h1>
+      </div>
+
+      <div class="grid_4">
+        <img src="/img/om_os_drenge.jpg" alt="" />
+        <div class="grid_4_text">
+          <h2>Hvem er VinMedDans?</h2>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt assumenda explicabo quidem quos beatae a, id dolor rem facere quae, deserunt doloribus veritatis temporibus porro pariatur suscipit nesciunt non vel.</p>
+          <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt optio, aperiam nemo nam sapiente quia magni corporis ut ipsa officia, aliquam nostrum? Magni cum maxime sunt ex sequi libero. Illo!</p>
+        </div>
+      </div>
+      <div class="grid_4_1">
+        <h2>VinMedDans Galleri</h2>
+      </div>
+      <div class="grid_4_2">
+        <img src="/img/galleri_1.HEIC" alt="" />
+        <img src="/img/galleri_2.HEIC" alt="" />
+        <img src="/img/galleri_3.HEIC" alt="" />
+        <img src="/img/galleri_4.HEIC" alt="" />
+        <img src="/img/galleri_5.HEIC" alt="" />
+        <img src="/img/galleri_6.HEIC" alt="" />
+        <img src="/img/galleri_7.HEIC" alt="" />
+        <img src="/img/galleri_8.HEIC" alt="" />
+      </div>
+
+      <Footer />
+    </main>
   </body>
 </html>
 
 <style>
   * {
-    padding: 0;
-    margin: 0;
+    padding: 2px;
+    margin: 2px;
+  }
+  .animation_top img {
+    width: 200px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .animation_top {
+    text-align: center;
+  }
+
+  .grid_4 img {
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+  }
+
+  .grid_4 {
+    text-align: center;
+  }
+
+  .grid_4_1 {
+    text-align: center;
+  }
+
+  .grid_4_2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .grid_4_2 img {
+    width: 180px;
+  }
+
+  @media (min-width: 750px) {
+    /* web */
+
+    .animation_top img {
+      width: 400px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .animation_top {
+      text-align: center;
+    }
+
+    .grid_4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: left;
+    }
+    .grid_4 img {
+      width: 80%;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+
+    .grid_4_text {
+      margin: 20px;
+      padding: 20px;
+    }
+
+    .grid_4_1 {
+      text-align: center;
+    }
+
+    .grid_4_2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 10px;
+    }
+
+    .grid_4_2 img {
+      width: 100%;
+    }
   }
 </style>
