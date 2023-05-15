@@ -18,29 +18,17 @@ import "../style/generelt.css"
   <body>
     <Header />
     <main>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <div class="animation_top">
+     <div class="animation_top">
             <img src="/img/bær.png" alt="">
             <h1>Kontakt os</h1>
         </div>
         <div class="grid_5">
          <section class="grid_5_1">
-             <h1>Find os</h1>
+             <h2>Find os</h2>
              <p>Find os på sociale medier</p>
          </section>
          <section class="grid_5_2">
-             <h1>Kontakt os</h1>
+             <h2>Kontakt os</h2>
              <p>Udfyld kontaktformularen for at kontakte os. Vi glæder os til at høre fra dig.</p>
              <form>
                 <!-- Formular-indhold -->
@@ -117,6 +105,12 @@ input[type=submit]:hover {
 }
 @media (min-width: 750px) {
   /*web*/ 
+  .animation_top img {
+    width: 400px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
   .grid_5 {
     display: grid;
     grid-template-columns: 1fr 1fr;
