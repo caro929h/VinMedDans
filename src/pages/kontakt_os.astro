@@ -17,13 +17,109 @@ import "../style/generelt.css"
   </head>
   <body>
     <Header />
-    <main></main>
+    <main>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="animation_top">
+            <img src="/img/bær.png" alt="">
+            <h1>Kontakt os</h1>
+        </div>
+        <div class="grid_5">
+         <section class="grid_5_1">
+             <h1>Find os</h1>
+             <p>Find os på sociale medier</p>
+         </section>
+         <section class="grid_5_2">
+             <h1>Kontakt os</h1>
+             <p>Udfyld kontaktformularen for at kontakte os. Vi glæder os til at høre fra dig.</p>
+             <form>
+                <!-- Formular-indhold -->
+                <div class="form-felt">
+                  <label>
+                    <input placeholder="Navn" type="text" name="navn" required />
+                  </label>
+                </div>
+                <div class="form-felt">
+                  <label>
+                    <input placeholder="Mail" type="text" name="navn" required />
+                  </label>
+                </div>
+                <label>
+                 <textarea id="subject" name="subject" placeholder="Forespørgsel..." style="height:200px"></textarea>
+                </label>
+                 </div>
+                <div>
+                    <input type="submit" value="Send">
+                </div>
+               </form>
+         </section>
+        </div>
+        </main>
     <Footer />
   </body>
 </html>
 
 <style>
-  * {
+* {
     padding: 0;
     margin: 0;
+}
+.animation_top {
+    text-align: center
+}
+
+.animation_top img {
+    width: 200px;
+    display: block;
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.grid_5_2, .grid_5_1 {
+}
+
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+  font-family: "Amatic SC";
+  font-size: 1.2rem;
+}
+
+input[type=submit] {
+  background-color: #55A603;
+  color: #F0D8E1;
+  padding: 10px 25px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-family: "Amatic SC";
+  font-size: 1.2rem;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+@media (min-width: 750px) {
+  /*web*/ 
+  .grid_5 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 10px;
   }
+}
