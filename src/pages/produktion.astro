@@ -18,8 +18,16 @@ import "../style/generelt.css";
   <body>
     <Header />
     <main>
-      <div class="bær_top">
+      <div class="ber_top">
         <img src="img/bær.png" alt="bærpåtoppen" />
+        <h1 class="produktionoverskrift">Produktion</h1>
+      </div>
+      <div class="grid_2">
+        <img src="img/asbjorn.jpg" alt="asbjorn" />
+        <div class="grid_2_tekst">
+          <h2>Plukker</h2>
+          <p>Her kommer Amalies tekst til plukkeriet :D</p>
+        </div>
       </div>
     </main>
     <Footer />
@@ -30,5 +38,23 @@ import "../style/generelt.css";
   * {
     padding: 0;
     margin: 0;
+  }
+
+  .ber_top img {
+    width: 50%;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .produktionoverskrift {
+    text-align: center;
+  }
+
+  .grid_2 {
+  }
+
+  .grid_2 img {
+    justify-content: left;
   }
 </style>
