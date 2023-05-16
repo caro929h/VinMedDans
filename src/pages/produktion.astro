@@ -25,7 +25,7 @@ import "../style/generelt.css";
       <div class="grid_2_1">
         <img src="img/asbjorn.jpg" alt="asbjorn" />
         <div class="grid_2_1_tekst">
-          <h2>Plukker</h2>
+          <h2 class="overskrift1">Plukker</h2>
           <p>
             Når vi begynder processen med at lave bærvin, indledes det med plukning. At plukke bær på det præcise tidspunkt er afgørende for at opnå den mest fremragende smag og sukkerkoncentration. Derfor er sensommeren den optimale sæson for at
             indsamle bærrene. Når bærrene er indsamlet er det vigtigt at opbevare dem korrekt. Nogle af vores bær skal opbevares på køl for at sørge for de forbliver friske, hvor andre skal opbevares tørt.
@@ -34,7 +34,7 @@ import "../style/generelt.css";
       </div>
       <div class="grid_2_2">
         <div class="grid_2_2_tekst">
-          <h2>Koger</h2>
+          <h2 class="overskrift2">Koger</h2>
           <p>
             Efterfulgt heraf starter selve processen med at koge vinen, hvor bærrene samles i en stor gryde og kombineres med vand. Blandingen opvarmes forsigtigt, indtil den når kogepunktet. Derefter lader vi blandingen simre i en periode for at
             sikre, at eventuelle skadelige bakterier bliver deaktiveret. Efterfølgende overføres blandingen til vores gæringstanke for at køle ned, og her tilsætter vi sukker. I løbet af gæringen vil gæren omdanne sukkeret i frugten til alkohol.
@@ -45,13 +45,13 @@ import "../style/generelt.css";
       <div class="grid_2_3">
         <img src="img/asbjorn.jpg" alt="blander" />
         <div class="grid_2_3_tekst">
-          <h2>Blander</h2>
+          <h2 class="overskrift3">Blander</h2>
           <p>Efter vinen er færdig med sin gæring og fermentering, bliver vores hjemmelavede æblemost tilsat. Vi høster vores egne æbler og placerer dem i vores æblepresser for at udvinde den friske og sødlige saft.</p>
         </div>
       </div>
       <div class="grid_2_4">
         <div class="grid_2_4_tekst">
-          <h2>Omstikning</h2>
+          <h2 class="overskrift4">Omstikning</h2>
           <p>
             Når gæringen er fuldført, og sukkeret er blevet omdannet til alkohol, fjerner vi vinen fra gæringstanken. For at undgå bundfald i vores vine bruger vi en metode der kaldes “omstikning” hvor vi overfører vinen fra én beholder til én anden.
             Derefter tapper vi vinen til vores flasker. Vi forsegler vores flasker med kapsler for at forhindre ilt i at komme ind i flasken. Til sidst sætter vi etiketter på vores vine med vigtige oplysninger om vintype og årgang. Nu er vinen klar
@@ -71,11 +71,11 @@ import "../style/generelt.css";
     margin: 0;
   }
 
-  h2 {
+  .overskrift1 .overskrift2 .overskrift3 .overskrift4 {
     text-align: center;
   }
 
-  p {
+  .grid_2_1_tekst .grid_2_2_tekst .grid_2_3_tekst .grid_2_4_tekst {
     text-align: center;
     margin-inline: 3rem;
   }
@@ -91,6 +91,7 @@ import "../style/generelt.css";
 
   @media (min-width: 750px) {
     /*web*/
+
     .ber_top img {
       width: 40%;
       display: block;
