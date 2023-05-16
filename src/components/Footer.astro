@@ -1,16 +1,19 @@
 <main>
-  <div><h4>Stubbeløbsgade 2, 2100 København Ø</h4></div>
+  <div class="adresse"><h4>Stubbeløbsgade 2, 2100 København Ø</h4></div>
   <div><img src="/img/vinmeddanslogo.png" alt="Logo" class="footerimg" /></div>
   <div><h4>All rights reserved © Vinmeddans ApS</h4></div>
 </main>
 <style>
   .footerimg {
     display: block;
-    width: 200px;
+    width: 100px;
     margin-left: auto;
     margin-right: auto;
   }
 
+  .adresse {
+    order: 1;
+  }
   h4 {
     color: black;
     text-align: center;
@@ -28,8 +31,15 @@
       margin: 10px;
       padding: 10px;
     }
-    .h3 {
-      font-size: 1rem;
+    .footerimg {
+      display: block;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .adresse {
+      order: -1;
     }
   }
 </style>

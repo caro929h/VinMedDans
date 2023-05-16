@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import "../style/generelt.css"
+import "../style/generelt.css";
 ---
 
 <html lang="en">
@@ -10,110 +10,120 @@ import "../style/generelt.css"
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&display=swap" rel="stylesheet" />
     <title>Astro</title>
   </head>
   <body>
     <Header />
     <main>
-     <div class="animation_top">
-            <img src="/img/bær.png" alt="">
-            <h1>Kontakt os</h1>
-        </div>
-        <div class="grid_5">
-         <section class="grid_5_1">
-             <h2>Find os</h2>
-             <p>Find os på sociale medier</p>
-         </section>
-         <section class="grid_5_2">
-             <h2>Kontakt os</h2>
-             <p>Udfyld kontaktformularen for at kontakte os. Vi glæder os til at høre fra dig.</p>
-             <form>
-                <!-- Formular-indhold -->
-                <div class="form-felt">
-                  <label>
-                    <input placeholder="Navn" type="text" name="navn" required />
-                  </label>
-                </div>
-                <div class="form-felt">
-                  <label>
-                    <input placeholder="Mail" type="text" name="navn" required />
-                  </label>
-                </div>
-                <label>
-                 <textarea id="subject" name="subject" placeholder="Forespørgsel..." style="height:200px"></textarea>
-                </label>
-                 </div>
-                <div>
-                    <input type="submit" value="Send">
-                </div>
-               </form>
-         </section>
-        </div>
-        </main>
-    <Footer />
+      <div class="animation_top">
+        <img src="/img/bær.png" alt="" />
+        <h1>Kontakt os</h1>
+      </div>
+      <div class="grid_5">
+        <section class="grid_5_1">
+          <h2>Find os</h2>
+          <p>Find os på sociale medier</p>
+        </section>
+        <section class="grid_5_2">
+          <h2>Kontakt os</h2>
+          <p>Udfyld kontaktformularen for at kontakte os. Vi glæder os til at høre fra dig.</p>
+          <form>
+            <!-- Formular-indhold -->
+            <div class="form-felt">
+              <label>
+                <input placeholder="Navn" type="text" name="navn" required />
+              </label>
+            </div>
+            <div class="form-felt">
+              <label>
+                <input placeholder="Mail" type="text" name="navn" required />
+              </label>
+            </div>
+            <label>
+              <textarea id="subject" name="subject" placeholder="Forespørgsel..." style="height:200px"></textarea>
+            </label>
+          </form>
+          <div>
+            <input type="submit" value="Send" />
+          </div>
+        </section>
+      </div>
+    </main>
   </body>
+  <Footer />
 </html>
 
 <style>
-* {
+  * {
     padding: 0;
     margin: 0;
-}
-.animation_top {
-    text-align: center
-}
+  }
 
-.animation_top img {
+  main {
+    margin: 10%;
+  }
+  .animation_top {
+    text-align: center;
+  }
+
+  .animation_top img {
     width: 200px;
     display: block;
-    margin-left:auto;
-    margin-right:auto;
-}
-
-.grid_5_2, .grid_5_1 {
-}
-
-input[type=text], select, textarea {
-  width: 100%;
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  box-sizing: border-box;
-  margin-top: 6px;
-  margin-bottom: 16px;
-  resize: vertical;
-  font-family: "Amatic SC";
-  font-size: 1.2rem;
-}
-
-input[type=submit] {
-  background-color: #55A603;
-  color: #F0D8E1;
-  padding: 10px 25px;
-  border: none;
-  border-radius: 4px;
-  cursor: pointer;
-  font-family: "Amatic SC";
-  font-size: 1.2rem;
-}
-
-input[type=submit]:hover {
-  background-color: #45a049;
-}
-@media (min-width: 750px) {
-  /*web*/ 
-  .animation_top img {
-    width: 400px;
-    display: block;
-    margin-left:auto;
-    margin-right:auto;
-}
-  .grid_5 {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin: 10px;
+    margin-left: auto;
+    margin-right: auto;
   }
-}
+
+  .grid_5_2,
+  .grid_5_1 {
+  }
+
+  input[type="text"],
+  select,
+  textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: "Amatic SC";
+    font-size: 1.2rem;
+  }
+
+  input[type="submit"] {
+    background-color: #55a603;
+    color: #f0d8e1;
+    padding: 10px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Amatic SC";
+    font-size: 1.2rem;
+  }
+
+  input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  @media (min-width: 750px) {
+    /*web*/
+    main {
+      margin: 10%;
+    }
+    .animation_top img {
+      width: 400px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .grid_5 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin: 10px;
+    }
+  }
+</style>
