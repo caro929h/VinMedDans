@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import "../style/generelt.css"
+import "../style/generelt.css";
 ---
 
 <html lang="en">
@@ -10,14 +10,18 @@ import "../style/generelt.css"
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&display=swap" rel="stylesheet" />
     <title>Astro</title>
   </head>
   <body>
     <Header />
-    <main></main>
+    <main>
+      <div class="bær_top">
+        <img src="img/bær.png" alt="bærpåtoppen" />
+      </div>
+    </main>
     <Footer />
   </body>
 </html>
@@ -27,3 +31,4 @@ import "../style/generelt.css"
     padding: 0;
     margin: 0;
   }
+</style>
