@@ -70,12 +70,21 @@ import "../style/generelt.css";
     padding: 0;
     margin: 0;
   }
+  main {
+    margin: 10%;
+  }
 
-  .overskrift1 .overskrift2 .overskrift3 .overskrift4 {
+  .overskrift1,
+  .overskrift2,
+  .overskrift3,
+  .overskrift4 {
     text-align: center;
   }
 
-  .grid_2_1_tekst .grid_2_2_tekst .grid_2_3_tekst .grid_2_4_tekst {
+  .grid_2_1_tekst,
+  .grid_2_2_tekst,
+  .grid_2_3_tekst,
+  .grid_2_4_tekst {
     text-align: center;
     margin-inline: 3rem;
   }
@@ -92,6 +101,9 @@ import "../style/generelt.css";
   @media (min-width: 750px) {
     /*web*/
 
+    main {
+      margin: 0;
+    }
     .ber_top img {
       width: 40%;
       display: block;
@@ -119,6 +131,7 @@ import "../style/generelt.css";
       margin-left: 5rem;
       margin-top: 10rem;
       margin-right: 2rem;
+      text-align: left;
     }
 
     .grid_2_2 {
@@ -133,9 +146,9 @@ import "../style/generelt.css";
     }
 
     .grid_2_2_tekst {
-      margin-left: 5rem;
       margin-top: 10rem;
       margin-right: 5rem;
+      text-align: left;
     }
 
     .grid_2_3 {
@@ -154,6 +167,7 @@ import "../style/generelt.css";
       margin-left: 5rem;
       margin-top: 10rem;
       margin-right: 2rem;
+      text-align: left;
     }
 
     .grid_2_4 {
@@ -171,6 +185,14 @@ import "../style/generelt.css";
       margin-left: 5rem;
       margin-top: 10rem;
       margin-right: 5rem;
+      text-align: left;
+    }
+
+    .overskrift1,
+    .overskrift2,
+    .overskrift3,
+    .overskrift4 {
+      text-align: left;
     }
   }
 </style>
