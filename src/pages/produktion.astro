@@ -1,7 +1,7 @@
 ---
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import "../style/generelt.css"
+import "../style/generelt.css";
 ---
 
 <html lang="en">
@@ -10,16 +10,59 @@ import "../style/generelt.css"
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&display=swap" rel="stylesheet" />
     <title>Astro</title>
   </head>
   <body>
     <Header />
-    <main></main>
-    <Footer />
+    <main>
+      <div class="ber_top">
+        <img src="img/bær.png" alt="bærpåtoppen" />
+        <h1 class="produktionoverskrift">Produktion</h1>
+      </div>
+      <div class="grid_2_1">
+        <img src="img/asbjorn2.jpg" alt="asbjorn" />
+        <div class="grid_2_1_tekst">
+          <h2 class="overskrift1">Plukker</h2>
+          <p>
+            Når vi begynder processen med at lave bærvin, indledes det med plukning. At plukke bær på det præcise tidspunkt er afgørende for at opnå den mest fremragende smag og sukkerkoncentration. Derfor er sensommeren den optimale sæson for at
+            indsamle bærrene. Når bærrene er indsamlet er det vigtigt at opbevare dem korrekt. Nogle af vores bær skal opbevares på køl for at sørge for de forbliver friske, hvor andre skal opbevares tørt.
+          </p>
+        </div>
+      </div>
+      <div class="grid_2_2">
+        <div class="grid_2_2_tekst">
+          <h2 class="overskrift2">Koger</h2>
+          <p>
+            Efterfulgt heraf starter selve processen med at koge vinen, hvor bærrene samles i en stor gryde og kombineres med vand. Blandingen opvarmes forsigtigt, indtil den når kogepunktet. Derefter lader vi blandingen simre i en periode for at
+            sikre, at eventuelle skadelige bakterier bliver deaktiveret. Efterfølgende overføres blandingen til vores gæringstanke for at køle ned, og her tilsætter vi sukker. I løbet af gæringen vil gæren omdanne sukkeret i frugten til alkohol.
+          </p>
+        </div>
+        <img src="img/druer.jpeg" alt="koger" />
+      </div>
+      <div class="grid_2_3">
+        <img src="img/asbjorn2.jpg" alt="blander" />
+        <div class="grid_2_3_tekst">
+          <h2 class="overskrift3">Blander</h2>
+          <p>Efter vinen er færdig med sin gæring og fermentering, bliver vores hjemmelavede æblemost tilsat. Vi høster vores egne æbler og placerer dem i vores æblepresser for at udvinde den friske og sødlige saft.</p>
+        </div>
+      </div>
+      <div class="grid_2_4">
+        <div class="grid_2_4_tekst">
+          <h2 class="overskrift4">Omstikning</h2>
+          <p>
+            Når gæringen er fuldført, og sukkeret er blevet omdannet til alkohol, fjerner vi vinen fra gæringstanken. For at undgå bundfald i vores vine bruger vi en metode der kaldes “omstikning” hvor vi overfører vinen fra én beholder til én anden.
+            Derefter tapper vi vinen til vores flasker. Vi forsegler vores flasker med kapsler for at forhindre ilt i at komme ind i flasken. Til sidst sætter vi etiketter på vores vine med vigtige oplysninger om vintype og årgang. Nu er vinen klar
+            til at blive solgt.
+          </p>
+        </div>
+        <img src="img/oliver.jpeg" alt="omstikning" />
+      </div>
+    </main>
   </body>
+  <Footer />
 </html>
 
 <style>
@@ -27,3 +70,129 @@ import "../style/generelt.css"
     padding: 0;
     margin: 0;
   }
+  main {
+    margin: 10%;
+  }
+
+  .overskrift1,
+  .overskrift2,
+  .overskrift3,
+  .overskrift4 {
+    text-align: center;
+  }
+
+  .grid_2_1_tekst,
+  .grid_2_2_tekst,
+  .grid_2_3_tekst,
+  .grid_2_4_tekst {
+    text-align: center;
+    margin-inline: 3rem;
+  }
+  img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+    margin-top: 3rem;
+  }
+  .grid_2_1_tekst {
+  }
+
+  @media (min-width: 750px) {
+    /*web*/
+
+    main {
+      margin: 0;
+    }
+    .ber_top img {
+      width: 40%;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .produktionoverskrift {
+      text-align: center;
+      margin-bottom: 10rem;
+    }
+
+    .grid_2_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: left;
+    }
+
+    .grid_2_1 img {
+      width: 100%;
+      display: block;
+    }
+
+    .grid_2_1_tekst {
+      margin-left: 5rem;
+      margin-top: 10rem;
+      margin-right: 2rem;
+      text-align: left;
+    }
+
+    .grid_2_2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 3rem;
+    }
+
+    .grid_2_2 img {
+      width: 100%;
+      display: block;
+    }
+
+    .grid_2_2_tekst {
+      margin-top: 10rem;
+      margin-right: 5rem;
+      text-align: left;
+    }
+
+    .grid_2_3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      text-align: left;
+      margin-top: 3rem;
+    }
+
+    .grid_2_3 img {
+      width: 100%;
+      display: block;
+    }
+
+    .grid_2_3_tekst {
+      margin-left: 5rem;
+      margin-top: 10rem;
+      margin-right: 2rem;
+      text-align: left;
+    }
+
+    .grid_2_4 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      margin-top: 3rem;
+    }
+
+    .grid_2_4 img {
+      width: 100%;
+      display: block;
+    }
+
+    .grid_2_4_tekst {
+      margin-left: 5rem;
+      margin-top: 10rem;
+      margin-right: 5rem;
+      text-align: left;
+    }
+
+    .overskrift1,
+    .overskrift2,
+    .overskrift3,
+    .overskrift4 {
+      text-align: left;
+    }
+  }
+</style>

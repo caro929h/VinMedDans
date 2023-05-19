@@ -1,4 +1,5 @@
 <main>
+<<<<<<< HEAD
   <section class="section_footer">
     <div class="footer1">
       <p>All rights reserved © Vinmeddans ApS</p>
@@ -11,6 +12,11 @@
       <p>2100 København Ø</p>
     </div>
   </section>
+=======
+  <div class="adresse"><h4>Stubbeløbsgade 2, 2100 København Ø</h4></div>
+  <div><img src="/img/vinmeddanslogo.png" alt="Logo" class="footerimg" /></div>
+  <div><h4>All rights reserved © Vinmeddans ApS</h4></div>
+>>>>>>> abf2d7b1ccf62ac50b77b09809b4e1940d1a7de1
 </main>
 <style>
   footer {
@@ -26,22 +32,52 @@
   }
   .footerimg {
     display: block;
-    width: 200px;
+    width: 100px;
     margin-left: auto;
     margin-right: auto;
   }
 
+<<<<<<< HEAD
   p {
     font-size: 0.8rem;
+=======
+  .adresse {
+    order: 1;
+  }
+  h4 {
+>>>>>>> abf2d7b1ccf62ac50b77b09809b4e1940d1a7de1
     color: black;
     text-align: center;
-    font-family: "Kanit";
   }
 
   main {
+<<<<<<< HEAD
     padding-top: 10px;
     margin-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 10px;
+=======
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+  @media (min-width: 750px) {
+    /*web*/
+    main {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      margin: 10px;
+      padding: 10px;
+    }
+    .footerimg {
+      display: block;
+      width: 200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .adresse {
+      order: -1;
+    }
+>>>>>>> abf2d7b1ccf62ac50b77b09809b4e1940d1a7de1
   }
 </style>
