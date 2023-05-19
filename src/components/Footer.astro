@@ -1,12 +1,29 @@
 <main>
-  <img src="/img/pink_logo.png" alt="Logo" class="footerimg" />
-  <p>Stubbeløbsgade 2</p>
-  <p>2100 København Ø</p>
-  <p>vinmeddans@gmail.com</p>
-
-  <div class="footerbox"></div>
+  <section class="section_footer">
+    <div class="footer1">
+      <p>All rights reserved © Vinmeddans ApS</p>
+    </div>
+    <div class="footer2">
+      <img src="../img/pink_logo.png" alt="Logo" class="footerimg" />
+    </div>
+    <div class="footer3">
+      <p>Stubbeløbsgade 2</p>
+      <p>2100 København Ø</p>
+    </div>
+  </section>
 </main>
 <style>
+  footer {
+    display: grid;
+    padding: 30px;
+    text-align: center;
+  }
+
+  .section_footer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 40px;
+  }
   .footerimg {
     display: block;
     width: 200px;
@@ -15,6 +32,7 @@
   }
 
   p {
+    font-size: 0.8rem;
     color: black;
     text-align: center;
     font-family: "Kanit";
@@ -25,6 +43,5 @@
     margin-top: 10px;
     padding-bottom: 10px;
     margin-bottom: 10px;
-    background-color: white;
   }
 </style>
