@@ -1,11 +1,7 @@
 <header>
   <div class="navigation_wrap">
     <div class="logo">
-<<<<<<< HEAD
       <a href="/"> <img class="logo_img" src="/img/logo.png" alt="" /></a>
-=======
-      <a href="/"> <img class="logo_img" src="/img/headerlogo.png" alt="" /></a>
->>>>>>> abf2d7b1ccf62ac50b77b09809b4e1940d1a7de1
     </div>
 
     <button id="burger-menu">
@@ -28,7 +24,6 @@
 <style>
   /* HEADER */
 
-<<<<<<< HEAD
   header {
     position: relative;
     top: 2%;
@@ -36,13 +31,6 @@
     justify-content: space-between;
     padding: 10px;
     margin: 10px;
-=======
-  .navigation_wrap {
-    display: flex;
-    align-items: center;
-    padding: 20px;
-    margin: 20px;
->>>>>>> abf2d7b1ccf62ac50b77b09809b4e1940d1a7de1
   }
 
   .logo_img {
@@ -52,7 +40,6 @@
 
   header nav ul {
     display: flex;
-<<<<<<< HEAD
     justify-content: space-between;
     list-style: none;
     margin: 0;
@@ -90,26 +77,10 @@
     #burger-menu {
       display: none;
     }
-=======
-    gap: 4rem;
-    align-items: center;
-    align-items: right;
-    padding-right: 2rem;
-    justify-content: space-between;
-    position: fixed;
-    top: 0;
-    background-color: none;
-    width: 100%;
-  }
-
-  .logo_img {
-    width: 20%;
->>>>>>> abf2d7b1ccf62ac50b77b09809b4e1940d1a7de1
   }
   @media (max-width: 750px) {
     /* HEADER */
 
-<<<<<<< HEAD
     .navigation_wrap {
       position: relative;
       display: flex;
@@ -256,135 +227,6 @@
       color: rgb(215, 150, 161);
       -webkit-text-stroke-width: 2px;
       -webkit-text-stroke-color: rgb(215, 150, 161);
-=======
-  @media (max-width: 600px) {
-    /* BURGERMENU */
-    #burger-menu {
-      text-indent: -9999px;
-      display: block;
-      border: none;
-      background: transparent;
-      margin: 60px;
-      cursor: pointer;
-      height: 27px;
-      width: 27px;
-      z-index: 2;
-      position: fixed;
-      top: 0px;
-      right: 30px;
-    }
-
-    #burger-menu span,
-    #burger-menu span:before,
-    #burger-menu span:after {
-      background: white;
-      display: block;
-      height: 3px;
-      opacity: 1;
-      position: absolute;
-      transition: 0.3s ease-in-out;
-      content: "";
-    }
-    #burger-menu span:before {
-      left: 0px;
-      top: -10px;
-      width: 27px;
-    }
-    #burger-menu span {
-      left: 0px;
-      top: 13px;
-      width: 27px;
-    }
-    #burger-menu span:after {
-      left: 0px;
-      top: 10px;
-      width: 27px;
-    }
-    #burger-menu.close span:before {
-      top: 0px;
-      transform: rotate(90deg);
-      width: 27px;
-      background: pink;
-    }
-    #burger-menu.close span {
-      transform: rotate(-45deg);
-      top: 13px;
-      width: 27px;
-      background: pink;
-    }
-    #burger-menu.close span:after {
-      top: 0px;
-      left: 0;
-      transform: rotate(90deg);
-      opacity: 0;
-      width: 0;
-      background: pink;
-    }
-    #menu {
-      z-index: 1;
-      min-width: 100%;
-      min-height: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      right: 0;
-      height: 0;
-      visibility: hidden;
-      opacity: 0;
-      text-align: center;
-      padding-top: 20px;
-      transition: all 0.3s ease-in-out;
-    }
-    #menu.overlay {
-      visibility: visible;
-      opacity: 1;
-      padding-top: 100px;
-      background: white;
-    }
-    #menu ul {
-      padding: 0;
-    }
-    #menu li {
-      list-style: none;
-      display: initial;
-    }
-    #menu a {
-      color: pink;
-      display: block;
-      font-size: 200%;
-      margin-bottom: 30px;
-      text-decoration: none;
-      font-family: "Amatic SC";
-      text-align: center;
-      padding-top: 2%;
-    }
-
-    #menu a:hover {
-      color: rgb(215, 150, 161);
-      -webkit-text-stroke-width: 2px;
-      -webkit-text-stroke-color: rgb(215, 150, 161);
-    }
-  }
-
-  @media (min-width: 750px) {
-    /*web*/
-    #menu a {
-      color: black;
-      display: block;
-      font-size: 1.5rem;
-      margin-bottom: 30px;
-      text-decoration: none;
-      font-family: "Amatic SC";
-      padding-top: 2%;
-    }
-    ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-    }
-    li {
-      float: right;
->>>>>>> abf2d7b1ccf62ac50b77b09809b4e1940d1a7de1
     }
   }
 </style>
