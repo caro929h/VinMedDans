@@ -18,20 +18,19 @@ import "../style/generelt.css";
   <body>
     <Header />
     <main>
+      <br />
+
       <div class="animation_top">
         <img src="/img/bær.png" alt="" />
         <h1>Kontakt os</h1>
       </div>
       <div class="grid_5">
         <section class="grid_5_1">
-          <h2>Find os</h2>
-          <p>Find os på Instagram her:</p>
-          <div class="instagramlogo">
-            <a href="https://www.instagram.com/vinmeddans/"> <img class="instagramlogo_img" src="/img/instagramlogo.png" alt="" /></a>
-          </div>
+          <h1>Find os</h1>
+          <p>Find os på sociale medier</p>
         </section>
         <section class="grid_5_2">
-          <h2>Kontakt os</h2>
+          <h1>Kontakt os</h1>
           <p>Udfyld kontaktformularen for at kontakte os. Vi glæder os til at høre fra dig.</p>
           <form>
             <!-- Formular-indhold -->
@@ -63,10 +62,6 @@ import "../style/generelt.css";
   * {
     padding: 0;
     margin: 0;
-  }
-
-  main {
-    margin: 10%;
   }
   .animation_top {
     text-align: center;
@@ -112,22 +107,8 @@ import "../style/generelt.css";
   input[type="submit"]:hover {
     background-color: #45a049;
   }
-
-  .instagramlogo_img {
-    width: 15%;
-    margin: 10%;
-  }
   @media (min-width: 750px) {
     /*web*/
-    main {
-      margin: 10%;
-    }
-    .animation_top img {
-      width: 400px;
-      display: block;
-      margin-left: auto;
-      margin-right: auto;
-    }
     .grid_5 {
       display: grid;
       grid-template-columns: 1fr 1fr;
