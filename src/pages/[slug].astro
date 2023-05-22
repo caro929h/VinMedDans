@@ -1,12 +1,13 @@
 ---
-import Layouts from "../../Layout/Layouts.astro";
+import Layouts from "../Layout/Layouts.astro";
 //import { Debug } from "astro/components";
-const { personID } = Astro.params;
+const { vinID } = Astro.params;
 
 export let data;
 
 export async function getStaticPaths() {
-  const url = `https://xqvteegxtrhyaxryzjmy.supabase.co/rest/v1/Vine?select=id`;
+  //https://xqvteegxtrhyaxryzjmy.supabase.co
+  const url = `https://xqvteegxtrhyaxryzjmy.supabase.co/rest/v1/Vine`;
   const options = {
     headers: {
       apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxdnRlZWd4dHJoeWF4cnl6am15Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODM3MDA4MTgsImV4cCI6MTk5OTI3NjgxOH0.fIAM4hosM6TLUsP1u7U7f2kO-f0G5EN_4OfCSRzoeg4",
@@ -15,17 +16,19 @@ export async function getStaticPaths() {
 
   const response = await fetch(url, options);
   data = await response.json();
-  return data.map((person) => ({ params: { personID: person.id } }));
+  return data.map((vin) => ({ params: { vinID: vin.id } }));
 }
 
-const dennePerson = data.find((person) => person.id == personID);
+const denneVin = data.find((vin) => vin.id == vinID);
 ---
 
 <!-- <Debug {dennePerson} /> -->
-<Layouts title={dennePerson.id}>
+<Layouts title={denneVin.id}>
   <main>
-    <h2>{dennePerson.name}</h2>
-    <p>{dennePerson.scene}</p>
-    <img src={`/img/lineupimg${dennePerson.image}`} alt="profilbillede" />
+    <img src={`/img/produktimg${denneVin.img}`} alt="produktbillede" />
+    <h1>{denneVin.titel}</h1>
+    <h2>{denneVin.specifikationer}</h2>
+    <p>{denneVin.beskrivelse}</p>
+    <p>{denneVin.pris}</p>
   </main>
 </Layouts>

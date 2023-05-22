@@ -3,11 +3,31 @@ const { img, titel, specifikationer, beskrivelse, pris } = Astro.props;
 ---
 
 <article>
-  <div>
+  <div class="grid_3">
     <img src={img} alt="produktbillede" />
-    <h1>{titel}</h1>
-    <h2>{specifikationer}</h2>
-    <p>{beskrivelse}</p>
-    <p>{pris}</p>
+    <div class="grid_3_1">
+      <h1>{titel}</h1>
+      <h2>{specifikationer}</h2>
+      <p>{beskrivelse}</p>
+      <p>{pris}</p>
+      <button class="button"> Læs mere her</button>
+    </div>
   </div>
 </article>
+
+<style>
+  .grid_3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 30px;
+    margin: 30px;
+  }
+
+  img {
+    width: 25%;
+  }
+
+  .button {
+    color: green;
+  }
+</style>

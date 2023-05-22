@@ -1,5 +1,5 @@
 ---
-const url = "https://xqvteegxtrhyaxryzjmy.supabase.co/rest/v1/Vine?select=id";
+const url = "https://xqvteegxtrhyaxryzjmy.supabase.co/rest/v1/Vine";
 const options = {
   headers: {
     apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxdnRlZWd4dHJoeWF4cnl6am15Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODM3MDA4MTgsImV4cCI6MTk5OTI3NjgxOH0.fIAM4hosM6TLUsP1u7U7f2kO-f0G5EN_4OfCSRzoeg4",
@@ -26,52 +26,65 @@ import Webshopcard from "../components/Webshopcard.astro";
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&display=swap" rel="stylesheet" />
     <title>Om_os</title>
   </head>
+  <Header />
   <body>
-    <Header />
-    <main>
-      <div class="animation_top">
-        <img src="/img/bær.png" alt="" />
-        <h1>Webshop</h1>
-      </div>
+    <div class="animation_top">
+      <img src="/img/bær.png" alt="" />
+      <h1>Webshop</h1>
+    </div>
 
-      <Layouts title="Medlemsliste">
-        <main>
-          {data.map((person) => <Webshopcard image={`/img/produktimg/${person.image}`} name={person.name} scene={person.scene} />)}
-        </main>
-      </Layouts>
+    <Layouts title="Webshop">
+      <main>
+        {data.map((vin) => <Webshopcard img={`/img/produktimg/${vin.img}`} titel={vin.titel} specifikationer={vin.specifikationer} beskrivelse={vin.beskrivelse} pris={vin.pris} />)}
+      </main>
+    </Layouts>
+  </body>
+  <Footer />
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+    }
 
-      <Footer />
+    .animation_top {
+      text-align: center;
+      justify-content: center;
+    }
+    .animation_top img {
+      width: 200px;
+      display: relative;
+      margin-left: auto;
+      margin-right: auto;
+    }
 
-      <style>
-        * {
-          padding: 0;
-          margin: 0;
-        }
+    @media (min-width: 750px) {
+      /* web */
 
-        .animation_top {
-          text-align: center;
-        }
-        .animation_top img {
-          width: 200px;
-          display: relative;
-          margin-left: auto;
-          margin-right: auto;
-        }
-
-        @media (min-width: 750px) {
-          /* web */
-
-          .animation_top img {
-            width: 200px;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-          }
-          .animation_top {
-            text-align: center;
-          }
-        }
-      </style>
-    </main></body
-  >
+      .animation_top img {
+        width: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .animation_top {
+        text-align: center;
+      }
+    }
+    main {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1em;
+      padding: 1em;
+      justify-content: center;
+      padding: 20px;
+      margin: 20px;
+    }
+    @media screen and (min-width: 600px) {
+      main {
+        justify-content: center;
+        padding: 50px;
+        margin: 50px;
+      }
+    }
+  </style>
 </html>
