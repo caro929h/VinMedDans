@@ -1,7 +1,18 @@
 ---
+const url = "https://xqvteegxtrhyaxryzjmy.supabase.co/rest/v1/Vine?select=id";
+const options = {
+  headers: {
+    apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxdnRlZWd4dHJoeWF4cnl6am15Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODM3MDA4MTgsImV4cCI6MTk5OTI3NjgxOH0.fIAM4hosM6TLUsP1u7U7f2kO-f0G5EN_4OfCSRzoeg4",
+  },
+};
+const response = await fetch(url, options);
+const data = await response.json();
+
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 import "../style/generelt.css";
+import Layouts from "../Layout/Layouts.astro";
+import Webshopcard from "../components/Webshopcard.astro";
 ---
 
 <html lang="en">
@@ -22,6 +33,14 @@ import "../style/generelt.css";
         <img src="/img/bær.png" alt="" />
         <h1>Webshop</h1>
       </div>
+
+      <Layouts title="Medlemsliste">
+        <main>
+          {data.map((person) => <Webshopcard image={`/img/produktimg/${person.image}`} name={person.name} scene={person.scene} />)}
+        </main>
+      </Layouts>
+
+      <Footer />
 
       <style>
         * {
