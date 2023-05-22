@@ -1,0 +1,13 @@
+---
+const { img, titel, specifikationer, beskrivelse, pris } = Astro.props;
+---
+
+<article>
+  <div>
+    <img src={img} alt="produktbillede" />
+    <h1>{titel}</h1>
+    <h2>{specifikationer}</h2>
+    <p>{beskrivelse}</p>
+    <p>{pris}</p>
+  </div>
+</article>

@@ -40,7 +40,7 @@ import "../style/generelt.css";
             sikre, at eventuelle skadelige bakterier bliver deaktiveret. Efterfølgende overføres blandingen til vores gæringstanke for at køle ned, og her tilsætter vi sukker. I løbet af gæringen vil gæren omdanne sukkeret i frugten til alkohol.
           </p>
         </div>
-        <img src="img/druer.jpeg" alt="koger" />
+        <img class="order" src="img/druer.jpeg" alt="koger" />
       </div>
       <div class="grid_2_3">
         <img src="img/blande2-2.jpg" alt="blander" />
@@ -58,7 +58,7 @@ import "../style/generelt.css";
             til at blive solgt.
           </p>
         </div>
-        <img src="img/oliver.jpeg" alt="omstikning" />
+        <img class="order" src="img/oliver.jpeg" alt="omstikning" />
       </div>
     </main>
   </body>
@@ -108,7 +108,21 @@ import "../style/generelt.css";
   .grid_2_1_tekst {
   }
 
-  @media (min-width: 750px) {
+  .grid_2_2 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .grid_2_4 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .order {
+    order: -1;
+  }
+
+  @media (min-width: 500px) {
     /*web*/
     .animation_top img {
       width: 200px;
@@ -136,7 +150,7 @@ import "../style/generelt.css";
 
     .grid_2_1_tekst {
       margin-left: 5rem;
-      margin-top: 10rem;
+      margin-top: 25%;
       margin-right: 2rem;
       text-align: left;
     }
@@ -153,7 +167,7 @@ import "../style/generelt.css";
     }
 
     .grid_2_2_tekst {
-      margin-top: 10rem;
+      margin-top: 25%;
       margin-right: 5rem;
       text-align: left;
     }
@@ -172,7 +186,7 @@ import "../style/generelt.css";
 
     .grid_2_3_tekst {
       margin-left: 5rem;
-      margin-top: 10rem;
+      margin-top: 25%;
       margin-right: 2rem;
       text-align: left;
     }
@@ -180,7 +194,7 @@ import "../style/generelt.css";
     .grid_2_4 {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      margin-top: 3rem;
+      margin-top: 2rem;
     }
 
     .grid_2_4 img {
@@ -190,9 +204,13 @@ import "../style/generelt.css";
 
     .grid_2_4_tekst {
       margin-left: 5rem;
-      margin-top: 10rem;
+      margin-top: 25%;
       margin-right: 5rem;
       text-align: left;
+    }
+
+    .order {
+      order: 1;
     }
 
     .overskrift1,
