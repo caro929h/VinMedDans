@@ -1,5 +1,7 @@
 ---
+import { data } from "../pages/[slug].astro";
 const { img, titel, specifikationer, beskrivelse, pris } = Astro.props;
+console.log(data);
 ---
 
 <article>
@@ -10,10 +12,9 @@ const { img, titel, specifikationer, beskrivelse, pris } = Astro.props;
       <h2>{specifikationer}</h2>
       <p>{beskrivelse}</p>
       <p>{pris}</p>
-      <button class="button">
-        <link href="../[slug].astro" />
-        Læs om mig
-      </button>
+      <a href=`vine/${data.slug}`>
+        <button class="button"> Læs om mig</button>
+      </a>
     </div>
   </div>
 </article>

@@ -1,5 +1,5 @@
 ---
-import Layouts from "../Layout/Layouts.astro";
+import Layouts from "../../Layout/Layouts.astro";
 //import { Debug } from "astro/components";
 const { vinID } = Astro.params;
 
@@ -22,7 +22,7 @@ export async function getStaticPaths() {
 const denneVin = data.find((vin) => vin.id == vinID);
 ---
 
-<!-- <Debug {dennePerson} /> -->
+<!-- <Debug {denneVin} /> -->
 <Layouts title={denneVin.id}>
   <main>
     <img src={`/img/produktimg${denneVin.img}`} alt="produktbillede" />
