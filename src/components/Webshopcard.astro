@@ -1,7 +1,6 @@
 ---
-import { data } from "../pages/[slug].astro";
-const { img, titel, specifikationer, beskrivelse, pris } = Astro.props;
-console.log(data);
+import { data } from "../pages/vine/[slug].astro";
+const { id, img, titel, specifikationer, beskrivelse, pris, slug } = Astro.props;
 ---
 
 <article>
@@ -12,7 +11,7 @@ console.log(data);
       <h2>{specifikationer}</h2>
       <p>{beskrivelse}</p>
       <p>{pris}</p>
-      <a href=`vine/${data.slug}`>
+      <a href={`vin/${slug}`}>
         <button class="button"> Læs om mig</button>
       </a>
     </div>
@@ -24,7 +23,6 @@ console.log(data);
     display: grid;
     grid-template-columns: 1fr;
   }
-
   img {
     width: 25%;
     justify-self: center;

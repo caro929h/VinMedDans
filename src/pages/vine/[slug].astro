@@ -1,28 +1,28 @@
 ---
 import Layouts from "../../Layout/Layouts.astro";
+
 //import { Debug } from "astro/components";
 const { vinID } = Astro.params;
-
 export let data;
 
 export async function getStaticPaths() {
-  //https://xqvteegxtrhyaxryzjmy.supabase.co
-  const url = `https://xqvteegxtrhyaxryzjmy.supabase.co/rest/v1/Vine`;
-  const options = {
+  const data = await fetch("https://xqvteegxtrhyaxryzjmy.supabase.co/rest/v1/Vine", {
+    method: "GET",
     headers: {
       apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InhxdnRlZWd4dHJoeWF4cnl6am15Iiwicm9sZSI6ImFub24iLCJpYXQiOjE2ODM3MDA4MTgsImV4cCI6MTk5OTI3NjgxOH0.fIAM4hosM6TLUsP1u7U7f2kO-f0G5EN_4OfCSRzoeg4",
     },
-  };
+  }).then((response) => response.json());
 
-  const response = await fetch(url, options);
-  data = await response.json();
-  return data.map((vin) => ({ params: { vinID: vin.id } }));
+  return data.map((vin) => {
+    return {
+      params: { slug: vin.slug },
+      props: { myData: vin },
+    };
+  });
 }
-
-const denneVin = data.find((vin) => vin.id == vinID);
+const { denneVin } = Astro.props;
 ---
 
-<!-- <Debug {denneVin} /> -->
 <Layouts title={denneVin.id}>
   <main>
     <img src={`/img/produktimg${denneVin.img}`} alt="produktbillede" />
