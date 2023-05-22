@@ -10,7 +10,10 @@ const { img, titel, specifikationer, beskrivelse, pris } = Astro.props;
       <h2>{specifikationer}</h2>
       <p>{beskrivelse}</p>
       <p>{pris}</p>
-      <button class="button"> Læs mere her</button>
+      <button class="button">
+        <link href="../[slug].astro" />
+        Læs om mig
+      </button>
     </div>
   </div>
 </article>
@@ -18,7 +21,7 @@ const { img, titel, specifikationer, beskrivelse, pris } = Astro.props;
 <style>
   .grid_3 {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
 
   img {
@@ -39,5 +42,11 @@ const { img, titel, specifikationer, beskrivelse, pris } = Astro.props;
 
   button:hover {
     background-color: #45a049;
+  }
+  @media (min-width: 750px) {
+    .grid_3 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
   }
 </style>

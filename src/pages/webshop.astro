@@ -57,6 +57,18 @@ import Webshopcard from "../components/Webshopcard.astro";
       margin-right: auto;
     }
 
+    @media (max-width: 750px) {
+      main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6em;
+        padding: 1em;
+        justify-content: center;
+        padding: 20px;
+        margin: 20px;
+      }
+    }
+
     @media (min-width: 750px) {
       /* web */
 
@@ -69,16 +81,17 @@ import Webshopcard from "../components/Webshopcard.astro";
       .animation_top {
         text-align: center;
       }
+      main {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 6em;
+        padding: 1em;
+        justify-content: center;
+        padding: 20px;
+        margin: 20px;
+      }
     }
-    main {
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 1em;
-      padding: 1em;
-      justify-content: center;
-      padding: 20px;
-      margin: 20px;
-    }
+
     @media screen and (min-width: 600px) {
       main {
         justify-content: center;
