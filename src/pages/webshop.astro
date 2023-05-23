@@ -41,7 +41,7 @@ import Webshopcard from "../components/Webshopcard.astro";
 
     <Layouts title="Webshop">
       <main>
-        {data.map((vin) => <Webshopcard img={`/img/produktimg/${vin.img}`} titel={vin.titel} specifikationer={vin.specifikationer} beskrivelse={vin.beskrivelse} pris={vin.pris} slug={vin.slug} />)}
+        {data.map((vin) => <Webshopcard img={`/img/produktimg/${vin.img}`} titel={vin.titel} specifikationer={vin.specifikationer} beskrivelse={vin.beskrivelse} pris={vin.pris} slug={vin.slug} baggrund={vin.baggrund} />)}
       </main>
     </Layouts>
   </body>
@@ -55,6 +55,7 @@ import Webshopcard from "../components/Webshopcard.astro";
     .animation_top {
       text-align: center;
       justify-content: center;
+      margin-bottom: 20px;
     }
     .animation_top img {
       width: 200px;
@@ -70,8 +71,8 @@ import Webshopcard from "../components/Webshopcard.astro";
         gap: 6em;
         padding: 1em;
         justify-content: center;
-        padding: 20px;
-        margin: 20px;
+        padding: 10px;
+        margin: 10px;
       }
     }
 
@@ -90,19 +91,18 @@ import Webshopcard from "../components/Webshopcard.astro";
       main {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 6em;
-        padding: 1em;
+        gap: 1em;
         justify-content: center;
-        padding: 20px;
-        margin: 20px;
+        padding: 10px;
+        margin: 10px;
       }
     }
 
     @media screen and (min-width: 600px) {
       main {
         justify-content: center;
-        padding: 50px;
-        margin: 50px;
+        padding: 10px;
+        margin: 10px;
       }
     }
   </style>

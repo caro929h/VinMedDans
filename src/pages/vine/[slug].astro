@@ -1,5 +1,8 @@
 ---
 import Layouts from "../../Layout/Layouts.astro";
+import Header from "../../components/Header.astro";
+import Footer from "../../components/Footer.astro";
+import "../../style/generelt.css";
 
 export async function getStaticPaths() {
   const data = await fetch("https://xqvteegxtrhyaxryzjmy.supabase.co/rest/v1/Vine", {
@@ -21,11 +24,106 @@ console.log(myData);
 ---
 
 <Layouts title={myData.id}>
-  <main>
-    <img src={`/img/produktimg${myData.img}`} alt="produktbillede" />
-    <h1>{myData.titel}</h1>
-    <h2>{myData.specifikationer}</h2>
-    <p>{myData.beskrivelse}</p>
-    <p>{myData.pris}</p>
-  </main>
+  <body>
+    <Header />
+    <main>
+      <div class="animation_top">
+        <img src="/img/bær.png" alt="" />
+      </div>
+      <div class="grid_3_1_1">
+        <img src={`/img/produktimg/${myData.img}`} alt="produktbillede" />
+
+        <div class="grid_3_1_2">
+          <h1>{myData.titel}</h1>
+          <h2>{myData.specifikationer}</h2>
+          <p class="text">{myData.beskrivelse}</p>
+          <p class="pris">{myData.pris}</p>
+
+          <form>
+            <label>
+              Antal
+              <select name="antal">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+              </select>
+            </label>
+            <button class="button"> Læg i kurv</button>
+          </form>
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
 </Layouts>
+
+<style>
+  .animation_top {
+    text-align: center;
+  }
+  .animation_top img {
+    width: 200px;
+    display: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .grid_3_1_1 {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  img {
+    width: 140px;
+    justify-self: center;
+  }
+
+  .pris {
+    font-weight: bold;
+  }
+
+  .button {
+    background-color: #55a603;
+    color: #f0d8e1;
+    padding: 7px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Amatic SC";
+    font-size: 1.2rem;
+  }
+  button:hover {
+    background-color: #45a049;
+  }
+
+  label {
+    padding: 7px 25px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: "Amatic SC";
+    font-size: 1.2rem;
+  }
+
+  form {
+    display: flex;
+    gap: 1rem;
+  }
+
+  @media (min-width: 750px) {
+    .grid_3_1_1 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    img {
+      width: 140px;
+      justify-self: center;
+    }
+
+    .text {
+      padding-right: 50px;
+      margin-right: 80px;
+    }
+  }
+</style>

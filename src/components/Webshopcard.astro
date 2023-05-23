@@ -1,8 +1,8 @@
 ---
-const { img, titel, specifikationer, beskrivelse, pris, slug } = Astro.props;
+const { img, titel, specifikationer, beskrivelse, pris, slug, baggrund } = Astro.props;
 ---
 
-<article>
+<article style={{ backgroundColor: baggrund }}>
   <div class="grid_3">
     <img src={img} alt="produktbillede" />
     <div class="grid_3_1">
@@ -18,12 +18,18 @@ const { img, titel, specifikationer, beskrivelse, pris, slug } = Astro.props;
 </article>
 
 <style>
+  article {
+    width: 100%;
+    padding: 25px;
+    border-radius: px;
+  }
   .grid_3 {
     display: grid;
     grid-template-columns: 1fr;
   }
+
   img {
-    width: 25%;
+    width: 100px;
     justify-self: center;
   }
 
@@ -45,6 +51,11 @@ const { img, titel, specifikationer, beskrivelse, pris, slug } = Astro.props;
     .grid_3 {
       display: grid;
       grid-template-columns: 1fr 1fr;
+    }
+
+    img {
+      width: 140px;
+      justify-self: center;
     }
   }
 </style>
