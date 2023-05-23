@@ -1,6 +1,5 @@
 ---
-import { data } from "../pages/vine/[slug].astro";
-const { id, img, titel, specifikationer, beskrivelse, pris, slug } = Astro.props;
+const { img, titel, specifikationer, beskrivelse, pris, slug } = Astro.props;
 ---
 
 <article>
@@ -11,7 +10,7 @@ const { id, img, titel, specifikationer, beskrivelse, pris, slug } = Astro.props
       <h2>{specifikationer}</h2>
       <p>{beskrivelse}</p>
       <p>{pris}</p>
-      <a href={`vin/${slug}`}>
+      <a href={`vine/${slug}`}>
         <button class="button"> Læs om mig</button>
       </a>
     </div>

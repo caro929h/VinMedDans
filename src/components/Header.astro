@@ -73,12 +73,16 @@
     font-family: "Montserrat";
   }
 
+  #burger-menu {
+    display: none;
+  }
+
   @media (min-width: 750px) {
     #burger-menu {
-      display: none;
+      /* display: none; */
     }
   }
-  @media (max-width: 749px) {
+  @media (max-width: 750px) {
     /* HEADER */
 
     .navigation_wrap {
@@ -92,7 +96,6 @@
       gap: 1rem;
       align-items: center;
       align-items: right;
-      padding-right: 2rem;
       justify-content: space-between;
       position: block;
       top: 0;
@@ -142,7 +145,7 @@
     #burger-menu span:before,
     #burger-menu span:after {
       background: white;
-      display: block;
+      /*display: block;*/
       height: 3px;
       opacity: 1;
       position: absolute;
@@ -197,13 +200,14 @@
       opacity: 0;
       text-align: center;
       padding-top: 20px;
-      transition: all 0.3s ease-in-out;
     }
+
     #menu.overlay {
       visibility: visible;
       opacity: 1;
       padding-top: 100px;
       background: white;
+      transition: all 0.3s ease-in-out;
     }
     #menu ul {
       padding: 0;

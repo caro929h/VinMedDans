@@ -1,10 +1,6 @@
 ---
 import Layouts from "../../Layout/Layouts.astro";
 
-//import { Debug } from "astro/components";
-const { vinID } = Astro.params;
-export let data;
-
 export async function getStaticPaths() {
   const data = await fetch("https://xqvteegxtrhyaxryzjmy.supabase.co/rest/v1/Vine", {
     method: "GET",
@@ -20,15 +16,16 @@ export async function getStaticPaths() {
     };
   });
 }
-const { denneVin } = Astro.props;
+const { myData } = Astro.props;
+console.log(myData);
 ---
 
-<Layouts title={denneVin.id}>
+<Layouts title={myData.id}>
   <main>
-    <img src={`/img/produktimg${denneVin.img}`} alt="produktbillede" />
-    <h1>{denneVin.titel}</h1>
-    <h2>{denneVin.specifikationer}</h2>
-    <p>{denneVin.beskrivelse}</p>
-    <p>{denneVin.pris}</p>
+    <img src={`/img/produktimg${myData.img}`} alt="produktbillede" />
+    <h1>{myData.titel}</h1>
+    <h2>{myData.specifikationer}</h2>
+    <p>{myData.beskrivelse}</p>
+    <p>{myData.pris}</p>
   </main>
 </Layouts>
