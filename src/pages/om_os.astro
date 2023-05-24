@@ -26,7 +26,7 @@ import "../style/generelt.css";
       <div class="grid_4">
         <img src="/img/om_os_drenge.jpg" alt="" />
         <div class="grid_4_text">
-          <h2>Velkommen til Vin Med Dans!</h2>
+          <h2 class="grid_4_tekst">Velkommen til Vin Med Dans!</h2>
           <br />
           <p>
             Vi er et passioneret vinmageri, der er dannet af os tre unge mænd Lasse, Asbjørn og Oliver. Vores eventyr begyndte, da en fælles ven lærte os at lave vin fra hyldeblomst, som vi tog ud og plukket. Denne opskrift blev starten på vores drøm
@@ -92,19 +92,19 @@ import "../style/generelt.css";
   }
 
   .grid_4 img {
-    width: 300px;
+    width: 330px;
     margin-left: auto;
     margin-right: auto;
     display: block;
   }
-
+  /* 
   .grid_4 {
     text-align: center;
   }
 
   .grid_4_1 {
     text-align: center;
-  }
+  } */
 
   .grid_4_2 {
     display: grid;
@@ -114,6 +114,10 @@ import "../style/generelt.css";
 
   .grid_4_2 img {
     width: 170px;
+  }
+
+  .grid_4_tekst {
+    margin: 40px;
   }
 
   @media (min-width: 750px) {
