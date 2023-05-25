@@ -12,6 +12,7 @@ main {
   padding: 10px;
 }
 
+/******* Tekst style *******/
 h1 {
   font-family: "Amatic SC", bold;
   font-size: 2rem;
@@ -38,8 +39,9 @@ p {
   font-size: 1rem;
 }
 
+/******** Desktop site *******/
+
 @media (min-width: 750px) {
-  /*web*/
   h1 {
     font-size: 3rem;
   }

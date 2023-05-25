@@ -6,8 +6,8 @@ const { img, titel, specifikationer, beskrivelse, pris, slug, baggrund } = Astro
   <div class="grid_3">
     <img src={img} alt="produktbillede" />
     <div class="grid_3_1">
-      <h1>{titel}</h1>
-      <h2>{specifikationer}</h2>
+      <h1 class="titel">{titel}</h1>
+      <h2 class="specifikationer">{specifikationer}</h2>
       <p>{beskrivelse}</p>
       <p class="pris">{pris}</p>
       <a href={`/vine/${slug}`}>
@@ -22,6 +22,16 @@ const { img, titel, specifikationer, beskrivelse, pris, slug, baggrund } = Astro
     width: 100%;
     padding: 25px;
     border-radius: px;
+  }
+
+  .specifikationer {
+    font-size: 1.7rem;
+    margin-block: 0%;
+    margin-bottom: 2rem;
+  }
+  .titel {
+    margin-block: 0%;
+    margin-top: 1.5rem;
   }
   .grid_3 {
     display: grid;
