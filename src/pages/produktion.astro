@@ -65,6 +65,7 @@ import "../style/generelt.css";
 </html>
 
 <style>
+  /******** Generelle regler ********/
   * {
     padding: 0;
     margin: 0;
@@ -73,7 +74,16 @@ import "../style/generelt.css";
   main {
     margin: 10%;
   }
-
+  .animation_top {
+    text-align: center;
+    margin-bottom: 50px;
+  }
+  .animation_top img {
+    width: 200px;
+    display: relative;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .overskrift1,
   .overskrift2,
   .overskrift3,
@@ -82,6 +92,7 @@ import "../style/generelt.css";
     margin: 11px;
   }
 
+  /*******  Mobil site *******/
   .grid_2_1_tekst,
   .grid_2_2_tekst,
   .grid_2_3_tekst,
@@ -95,17 +106,6 @@ import "../style/generelt.css";
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-  }
-
-  .animation_top {
-    text-align: center;
-    margin-bottom: 50px;
-  }
-  .animation_top img {
-    width: 200px;
-    display: relative;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .grid_2_2 {
@@ -123,8 +123,11 @@ import "../style/generelt.css";
     order: -1;
   }
 
+  /******** Desktop site *******/
   @media (min-width: 700px) {
-    /*web*/
+    main {
+      margin: 0;
+    }
 
     .animation_top img {
       width: 200px;
@@ -134,10 +137,6 @@ import "../style/generelt.css";
     }
     .animation_top {
       text-align: center;
-    }
-
-    main {
-      margin: 0;
     }
     .grid_2_1 {
       display: grid;
