@@ -13,7 +13,7 @@ import "../style/generelt.css";
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&display=swap" rel="stylesheet" />
-    <title>Astro</title>
+    <title>VinMedDans</title>
   </head>
   <body>
     <Header />
@@ -21,6 +21,7 @@ import "../style/generelt.css";
     <main>
       <div class="image-container">
         <img class="forsidebillede" src="/img/forsidepic1.png" alt="Forside billede" />
+        <img class="forsidebillede2" src="/img/forsidepic2.jpeg" alt="Forside billede">
       </div>
     </main>
     <Footer />
@@ -39,16 +40,30 @@ import "../style/generelt.css";
   }
 
   img {
-    width: 150%;
+    width: 100%;
     height: auto;
     box-sizing: border-box;
+  }
+
+  .forsidebillede {
+      display: none;
+    }
+  .forsidebillede2{
+    display: block;
   }
 
   @media (min-width: 750px) {
     .forsidebillede {
       width: 100%;
     }
-  
+    .forsidebillede2{
+    display: none;
+  }
+  .forsidebillede {
+      display: block;
+    }
 
+
+  
   
 </style>
