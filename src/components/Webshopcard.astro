@@ -9,7 +9,7 @@ const { img, titel, specifikationer, beskrivelse, pris, slug, baggrund } = Astro
       <h1 class="titel">{titel}</h1>
       <h2 class="specifikationer">{specifikationer}</h2>
       <p>{beskrivelse}</p>
-      <p class="pris">{pris}</p>
+      <h2 class="pris">{pris}</h2>
       <a href={`/vine/${slug}`}>
         <button class="button"> Læs om mig</button>
       </a>
@@ -22,10 +22,6 @@ const { img, titel, specifikationer, beskrivelse, pris, slug, baggrund } = Astro
     width: 100%;
     padding: 25px;
     border-radius: px;
-  }
-
-  .pris {
-    font-weight: bold;
   }
 
   .specifikationer {
