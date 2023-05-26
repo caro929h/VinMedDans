@@ -34,8 +34,8 @@ console.log(myData);
         <img class="produkt_img" src={`/img/produktimg/${myData.img}`} alt="produktbillede" />
 
         <div class="grid_3_1_2">
-          <h1>{myData.titel}</h1>
-          <h2>{myData.specifikationer}</h2>
+          <h1 class="titel1">{myData.titel}</h1>
+          <h2 class="specifikationer1">{myData.specifikationer}</h2>
           <p class="text">{myData.beskrivelse}</p>
           <p class="pris">{myData.pris}</p>
 
@@ -72,6 +72,16 @@ console.log(myData);
     display: relative;
     margin-left: auto;
     margin-right: auto;
+  }
+
+  .specifikationer1 {
+    font-size: 1.7rem;
+    margin-block: 0%;
+    margin-bottom: 2rem;
+  }
+  .titel1 {
+    margin-block: 0%;
+    margin-top: 1.5rem;
   }
 
   /*******  Mobil site *******/
