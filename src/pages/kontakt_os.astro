@@ -50,9 +50,11 @@ import "../style/generelt.css";
         </section>
 
         <section class="grid_5_1">
-          <div class="instagram_link">
-            <img class="img_instagram" src="/img/animationer/instagram_bær.png" alt="" />
+          <div class="grid_5_1_1">
             <h1>Find os på Instagram</h1>
+            <div class="instagram_link">
+              <a href="https://www.instagram.com/vinmeddans/"> <img class="img_instagram" src="/img/instagram.png" alt="" /></a>
+            </div>
           </div>
           <div class="grid_5_5">
             <div class="grid_5_2">
@@ -123,15 +125,6 @@ import "../style/generelt.css";
     /******** Desktop site *******/
     @media (min-width: 750px) {
       /*web*/
-
-      .instagram_link {
-        display: flex;
-      }
-
-      .img_instagram {
-        width: 25%;
-        margin-top: 20px;
-      }
       .grid_5 {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -139,6 +132,15 @@ import "../style/generelt.css";
       }
       .grid_5_2 {
         width: 10%;
+      }
+
+      .grid_5_1_1 {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .img_instagram {
+        width: 200px;
       }
 
       .grid_5_3 {
