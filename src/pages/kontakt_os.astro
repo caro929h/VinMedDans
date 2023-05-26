@@ -50,7 +50,10 @@ import "../style/generelt.css";
         </section>
 
         <section class="grid_5_1">
-          <h1>Find os på Instagram</h1>
+          <div class="instagram_link">
+            <img class="img_instagram" src="/img/animationer/instagram_bær.png" alt="" />
+            <h1>Find os på Instagram</h1>
+          </div>
           <div class="grid_5_5">
             <div class="grid_5_2">
               <video class="reel_video" autoplay muted loop src="/img/reel.MP4"></video>
@@ -120,6 +123,15 @@ import "../style/generelt.css";
     /******** Desktop site *******/
     @media (min-width: 750px) {
       /*web*/
+
+      .instagram_link {
+        display: flex;
+      }
+
+      .img_instagram {
+        width: 25%;
+        margin-top: 20px;
+      }
       .grid_5 {
         display: grid;
         grid-template-columns: 1fr 1fr;
