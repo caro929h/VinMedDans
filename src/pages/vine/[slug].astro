@@ -31,7 +31,7 @@ console.log(myData);
         <img src={`/img/${myData.img_animation}`} alt="" />
       </div>
       <div class="grid_3_1_1" style={{ backgroundColor: myData.baggrund }}>
-        <img src={`/img/produktimg/${myData.img}`} alt="produktbillede" />
+        <img class="produkt_img" src={`/img/produktimg/${myData.img}`} alt="produktbillede" />
 
         <div class="grid_3_1_2">
           <h1>{myData.titel}</h1>
@@ -79,10 +79,12 @@ console.log(myData);
   .grid_3_1_1 {
     display: grid;
     grid-template-columns: 1fr;
+    margin: 20px;
+    padding: 20px;
   }
 
   img {
-    width: 80%;
+    width: 40%;
     justify-self: center;
   }
 
@@ -95,18 +97,19 @@ console.log(myData);
     cursor: pointer;
     font-family: "Amatic SC";
     font-size: 1.2rem;
+    margin-bottom: 20px;
   }
   button:hover {
-    background-color: #45a049;
+    background-color: #305832;
   }
 
   label {
-    padding: 7px 18px;
     border: none;
     border-radius: 4px;
     cursor: pointer;
     font-family: "Amatic SC", bold;
     font-size: 1.5rem;
+    margin-bottom: 20px;
   }
 
   .antalboks {
@@ -116,6 +119,10 @@ console.log(myData);
     font-family: "Amatic SC";
     font-size: 1.2rem;
     border: 3px;
+  }
+
+  .pris {
+    font-weight: bold;
   }
 
   form {
@@ -129,7 +136,7 @@ console.log(myData);
       grid-template-columns: 1fr 1fr;
     }
     img {
-      width: 45%;
+      width: 30%;
       justify-self: center;
     }
 
