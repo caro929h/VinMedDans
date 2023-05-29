@@ -10,7 +10,7 @@ import "../style/generelt.css";
     <link rel="icon" type="image/svg+xml" href="/favicon1.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <meta name="virksomhed" content="Vin Med Dans" />
+    <meta name="description" content="Vin Med Dans" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&display=swap" rel="stylesheet" />
@@ -51,9 +51,12 @@ import "../style/generelt.css";
   /******** Desktop site *******/ 
 
   @media (min-width: 750px) {
-    .forsidebillede {
-      width: 100%;
-    }
+    img {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+
     .forsidebillede2{
     display: none;
   }
