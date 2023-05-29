@@ -10,6 +10,7 @@ import "../style/generelt.css";
     <link rel="icon" type="image/svg+xml" href="/favicon1.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="description" content="Vin Med Dans" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&family=Montserrat&display=swap" rel="stylesheet" />
@@ -20,8 +21,8 @@ import "../style/generelt.css";
 
     <main>
       <div class="image-container">
-        <img class="forsidebillede" src="/img/forsidepic1.webp" alt="Forside billede" />
-        <img class="forsidebillede2" src="/img/forsidepic2.webp" alt="Forside billede">
+        <img class="forsidebillede" src="/img/forsidepic1.webp" alt="2 vine der står på en blomstermark" />
+        <img class="forsidebillede2" src="/img/forsidepic2.webp" alt="2 vine der står på en blomstermark mobil version">
       </div>
     </main>
     <Footer />
@@ -50,9 +51,12 @@ import "../style/generelt.css";
   /******** Desktop site *******/ 
 
   @media (min-width: 750px) {
-    .forsidebillede {
-      width: 100%;
-    }
+    img {
+    width: 100%;
+    height: auto;
+    box-sizing: border-box;
+  }
+
     .forsidebillede2{
     display: none;
   }
